@@ -1,5 +1,5 @@
 method: get
 #url:  http://hy.hybugu.mudu.tv/questionnaire/api/get_answers
-url: https://hy.hybugu.mudu.tv/questionnaire/api/get_questionnaires
+url: http://hy.hybugu.mudu.tv/questionnaire/api/get_questionnaires
 
 
