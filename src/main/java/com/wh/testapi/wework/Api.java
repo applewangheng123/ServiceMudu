@@ -22,6 +22,10 @@ import static io.restassured.RestAssured.useRelaxedHTTPSValidation;
 public class Api {
 
 
+    public Api(){
+        useRelaxedHTTPSValidation();
+    }
+
     public RequestSpecification getDefaultRequestSpecification(){
         return  given().log().all();
     }
