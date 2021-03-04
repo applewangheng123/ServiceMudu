@@ -11,9 +11,9 @@ public class Wework {
     @Test
     public static String getWeworkToken(String secret)
     {
-        return
+        return null;
 
-                (String)((ValidatableResponse)((ValidatableResponse)((ValidatableResponse)((Response) RestAssured.given().queryParam("corpid", new Object[] { WeworkConfig.getInstance().corpId }).queryParam("corpsecret", new Object[] { secret }).when().get("https://qyapi.weixin.qq.com/cgi-bin/gettoken", new Object[0])).then()).log().all()).statusCode(200)).extract().path("access_token", new String[0]);
+                //(String)((((Response) RestAssured.given().queryParam("corpid", new Object[] { WeworkConfig.getInstance().corpId }).queryParam("corpsecret", new Object[] { secret }).when().get("https://qyapi.weixin.qq.com/cgi-bin/gettoken", new Object[0])).then()).log().all()).statusCode(200)).extract().path("access_token", new String[0]);
     }
 
     public static String getToken()

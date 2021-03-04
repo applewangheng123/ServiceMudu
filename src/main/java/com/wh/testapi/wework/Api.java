@@ -4,23 +4,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.dataformat.yaml.YAMLFactory;
 import com.jayway.jsonpath.DocumentContext;
 import com.jayway.jsonpath.JsonPath;
-import de.sstoehr.harreader.HarReader;
-import de.sstoehr.harreader.HarReaderException;
-import de.sstoehr.harreader.model.Har;
-import de.sstoehr.harreader.model.HarEntry;
-import de.sstoehr.harreader.model.HarRequest;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 
+import static com.wh.testapi.wework.utls.SystemVar.getValue;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.useRelaxedHTTPSValidation;
 
 public class Api {
-
 
     public Api(){
         useRelaxedHTTPSValidation();
@@ -65,7 +59,7 @@ public class Api {
         if (restful.method.toLowerCase().contains("get")) {
             map.entrySet().forEach(entry -> {
                 restful.query.put(entry.getKey(), entry.getValue().toString());
-               // restful.query.replace(entry.getKey(), entry.getValue().toString());
+                //restful.query.replace(entry.getKey(), entry.getValue().toString());
             });
         }
         //post方法
@@ -85,7 +79,6 @@ public class Api {
 
     }
 
-    //90节课35分钟  todo  支持从yaml文件  Done
     public  Response getResponseFromYaml(String path, HashMap<String, Object> map)  {
 
         Restful restful=getApiFromYaml(path);
@@ -105,12 +98,9 @@ public class Api {
 
 
         return requestSpecification.log().all()
-                .when().request(restful.method, restful.url)
+                .when().request(restful.method, getValue("Host.url")+restful.url)
                 .then().log().all().extract().response();
 
-
     }
-
-
 
 }

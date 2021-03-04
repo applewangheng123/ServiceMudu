@@ -1,23 +1,32 @@
 package com.wh.testapi.wework.qibo;
 
-import io.qameta.allure.*;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
-@DisplayName("特大范围测试junit5的Dispaly")
-@Story("特大测试下story")
+
+//https://blog.csdn.net/weixin_43291944/article/details/95061580
 class QuestionnaireTest {
     Questionnaire questionnaire=new Questionnaire();
 
+    @ParameterizedTest
+    @CsvFileSource(resources = "/data/create.csv")
+    void adminInfo(String actId, String question_id) {
+        questionnaire.adminInfo(actId,question_id);
+    }
+
     @Test
-    void adminInfo() {
-        questionnaire.adminInfo("","");
+    void adminInfox() {
+        questionnaire.adminInfox();
+
     }
 
     @Test
     void createInfo() {
+        questionnaire.createInfo();
     }
+
 }

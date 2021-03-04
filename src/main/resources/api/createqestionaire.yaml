@@ -1,2 +1,2 @@
 method: post
-url: http://hy.hybugu.mudu.tv/questionnaire/api/create_questionnaire
+url: /questionnaire/api/create_questionnaire

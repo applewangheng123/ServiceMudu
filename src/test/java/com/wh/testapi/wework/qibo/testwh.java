@@ -28,4 +28,9 @@ public class testwh {
     void test2() {
     }
 
+    //参数化用例
+    @Test
+    void test3() {
+    }
+
 }

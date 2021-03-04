@@ -1,6 +1,8 @@
-package com.wh.testapi.wework;
+package com.wh.testapi.wework.utls;
 
 import java.util.Properties;
+
+//读取多环境的配置文件
 
 public class SystemVar {
 
