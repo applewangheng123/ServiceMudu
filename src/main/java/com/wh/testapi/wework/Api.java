@@ -31,7 +31,6 @@ public class Api {
             documentContext.set(entry.getKey(),entry.getValue());
         });
 
-        System.out.println("输出jsonstring的数据"+documentContext.jsonString());
         return documentContext.jsonString();
     }
 

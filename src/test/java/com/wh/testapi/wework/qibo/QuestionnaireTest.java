@@ -20,13 +20,25 @@ class QuestionnaireTest {
 
     @Test
     void adminInfox() {
-        questionnaire.adminInfox();
+        questionnaire.createExame();
+
+    }
+    @Test
+    void createExamethe() {
+        questionnaire.createExamether();
 
     }
 
     @Test
-    void createInfo() {
-        questionnaire.createInfo();
+    void createExame() {
+        questionnaire.getExam();
     }
+
+    @Test
+    void getNOyaml() {
+        questionnaire.getNoYamlExam();
+    }
+
+
 
 }
