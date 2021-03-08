@@ -21,8 +21,13 @@ class QuestionnaireTest {
     @Test
     void adminInfox() {
         questionnaire.createExame();
-
     }
+
+    @Test
+    void createExameMap() {
+        questionnaire.createExameMap();
+    }
+
     @Test
     void createExamethe() {
         questionnaire.createExamether();

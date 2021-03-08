@@ -1,6 +1,7 @@
 package com.wh.testapi.wework.qibo;
 
 import io.restassured.response.Response;
+import net.minidev.json.JSONObject;
 
 import java.util.HashMap;
 
@@ -30,21 +31,20 @@ public class Questionnaire extends Contact {
         return response;
     }
 
-    //get请求不使用yaml格式  todo
+    //get请求不使用yaml格式
     public Response getNoYamlExam()
     {
-        HashMap<String, Object> map = new HashMap();
-        map.put("page_num", Integer.valueOf(1));
-        map.put("page_size", Integer.valueOf(10));
-        map.put("actid", "a67ll07e");
 
         return  getDefaultRequestSpecification()
-                .queryParam(map.toString())
-                .when().get("/questionnaire/api/get_questionnaires")
+                .param("page_num",Integer.valueOf(1))
+                .param("page_size",Integer.valueOf(10))
+                .param("actid","a67ll07e")
+                .when().get("https://hy.hybugu.mudu.tv/questionnaire/api/get_questionnaires")
                 .then().log().all().extract().response();
 
     }
 
+    //post的几种类型
     //post使用yaml格式
     public Response createExame()
     {
@@ -54,6 +54,21 @@ public class Questionnaire extends Contact {
         return response;
     }
 
+    //post使用map格式
+    public Response createExameMap()
+    {
+        HashMap<String, Object> map = new HashMap();
+        map.put("actid","a67ll07e");
+        map.put("name","eh1");
+        map.put("description","");
+
+        return  getDefaultRequestSpecification()
+                .body(map)
+                .when().post("https://hy.hybugu.mudu.tv/examination/api/create_exam")
+                .then().log().all().extract().response();
+    }
+
+
     //post 不 使用ymal格式
     public Response createExamether()
     {
@@ -62,6 +77,7 @@ public class Questionnaire extends Contact {
         map.put("$.actid","a67ll07e");
         //读数据模板
         String mbody=template("/data/crearExame.json",map);
+        System.out.println("胡扯"+mbody);
 
         return  getDefaultRequestSpecification()
                 .body(mbody)
