@@ -1,0 +1,11 @@
+[ {
+  "uid" : "d5e0859f76e6d33b",
+  "name" : "测试junit5的Dispaly",
+  "time" : {
+    "start" : 1615196535864,
+    "stop" : 1615196536009,
+    "duration" : 145
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]

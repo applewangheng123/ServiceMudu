@@ -1,0 +1,26 @@
+{
+  "uid" : "ab17fc5a4eb3bca4b216b548c7f9fcbc",
+  "name" : "timeline",
+  "children" : [ {
+    "name" : "DESKTOP-5Q53L0R",
+    "children" : [ {
+      "name" : "18368@DESKTOP-5Q53L0R.ForkJoinPool-1-worker-1(12)",
+      "children" : [ {
+        "name" : "测试junit5的Dispaly",
+        "uid" : "d5e0859f76e6d33b",
+        "parentUid" : "087cf899aec0fb2eaa95cb502f8eb18b",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615196535864,
+          "stop" : 1615196536009,
+          "duration" : 145
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "087cf899aec0fb2eaa95cb502f8eb18b"
+    } ],
+    "uid" : "d18fd3035fe668f5cad40b9d345101bb"
+  } ]
+}

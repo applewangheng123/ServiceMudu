@@ -1,0 +1,22 @@
+{
+  "uid" : "83edc06c07f9ae9e47eb6dd1b683e4e2",
+  "name" : "packages",
+  "children" : [ {
+    "name" : "com.wh.testapi.wework.qibo.testwh",
+    "children" : [ {
+      "name" : "test1",
+      "uid" : "d5e0859f76e6d33b",
+      "parentUid" : "36022ea7795cd526456a86106a757311",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615196535864,
+        "stop" : 1615196536009,
+        "duration" : 145
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "com.wh.testapi.wework.qibo.testwh"
+  } ]
+}

@@ -1,0 +1,12 @@
+{
+  "$schema":"http://json-schema.org/draft-04/schema#",
+  "title":"book info",
+  "description":"some information about book",
+  "type":"object",
+  "properties":{
+    "errcode":{
+      "type":"string",
+      "minimum":1
+    }
+  }
+}

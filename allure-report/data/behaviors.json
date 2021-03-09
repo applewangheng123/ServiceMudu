@@ -1,0 +1,26 @@
+{
+  "uid" : "b1a8273437954620fa374b796ffaacdd",
+  "name" : "behaviors",
+  "children" : [ {
+    "name" : "测试下Feature",
+    "children" : [ {
+      "name" : "测试下story",
+      "children" : [ {
+        "name" : "测试junit5的Dispaly",
+        "uid" : "d5e0859f76e6d33b",
+        "parentUid" : "cdfd316e070dcdc6ed914a2d14ca6f36",
+        "status" : "passed",
+        "time" : {
+          "start" : 1615196535864,
+          "stop" : 1615196536009,
+          "duration" : 145
+        },
+        "flaky" : false,
+        "newFailed" : false,
+        "parameters" : [ ]
+      } ],
+      "uid" : "cdfd316e070dcdc6ed914a2d14ca6f36"
+    } ],
+    "uid" : "78c76213f8ebba85a5fd8b32e80119a6"
+  } ]
+}

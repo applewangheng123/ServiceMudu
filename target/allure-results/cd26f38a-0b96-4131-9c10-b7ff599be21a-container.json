@@ -1,0 +1,1 @@
+{"uuid":"cd26f38a-0b96-4131-9c10-b7ff599be21a","name":"测试junit5的Dispaly","children":["33f184b9-509e-4e89-a342-3d65e07eaa6c"],"befores":[{"name":"init","status":"passed","stage":"finished","steps":[],"attachments":[],"parameters":[],"start":1615196535873,"stop":1615196535874}],"afters":[],"links":[],"start":1615196535776,"stop":1615196536361}

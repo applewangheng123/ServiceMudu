@@ -1,9 +1,10 @@
 package com.wh.testapi.wework.qibo;
 
 import io.restassured.response.Response;
-import net.minidev.json.JSONObject;
-
 import java.util.HashMap;
+
+import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class Questionnaire extends Contact {
 
@@ -17,7 +18,6 @@ public class Questionnaire extends Contact {
         Response response = getResponseFromYaml("/api/create.yaml", map);
         return response;
     }
-
 
 
     //get请求使用yaml格式
@@ -44,8 +44,8 @@ public class Questionnaire extends Contact {
 
     }
 
-    //post的几种类型
-    //post使用yaml格式
+    //*************************post的几种类型*********************************************
+    //post使用yaml和map格式
     public Response createExame()
     {
         HashMap<String, Object> map = new HashMap();
@@ -53,6 +53,8 @@ public class Questionnaire extends Contact {
         Response response = getResponseFromYaml("/api/createExame.yaml", map);
         return response;
     }
+
+
 
     //post使用map格式
     public Response createExameMap()
@@ -62,10 +64,12 @@ public class Questionnaire extends Contact {
         map.put("name","eh1");
         map.put("description","");
 
+
         return  getDefaultRequestSpecification()
                 .body(map)
                 .when().post("https://hy.hybugu.mudu.tv/examination/api/create_exam")
-                .then().log().all().extract().response();
+                .then().assertThat().body(matchesJsonSchemaInClasspath("jsonschema/createx.json"))
+                .log().all().extract().response();
     }
 
 

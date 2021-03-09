@@ -1,0 +1,22 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "com.wh.testapi.wework.qibo.testwh",
+    "children" : [ {
+      "name" : "测试junit5的Dispaly",
+      "uid" : "d5e0859f76e6d33b",
+      "parentUid" : "92f8fa7eb7c79864f37802a885ac246c",
+      "status" : "passed",
+      "time" : {
+        "start" : 1615196535864,
+        "stop" : 1615196536009,
+        "duration" : 145
+      },
+      "flaky" : false,
+      "newFailed" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "92f8fa7eb7c79864f37802a885ac246c"
+  } ]
+}

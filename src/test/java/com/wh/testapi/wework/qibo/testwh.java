@@ -24,6 +24,7 @@ public class testwh {
     @Test
     void test1() {
     }
+
     @Test
     void test2() {
     }
