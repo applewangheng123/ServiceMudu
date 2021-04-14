@@ -68,7 +68,7 @@ public class Questionnaire extends Contact {
         return  getDefaultRequestSpecification()
                 .body(map)
                 .when().post("https://hy.hybugu.mudu.tv/examination/api/create_exam")
-                .then().assertThat().body(matchesJsonSchemaInClasspath("jsonschema/createx.json"))
+                .then().assertThat().body(matchesJsonSchemaInClasspath("exame/createx.json"))
                 .log().all().extract().response();
     }
 
